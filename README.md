@@ -1,1 +1,1 @@
-is this working
+In this project, I dip my toes into NLP by exploring the basic functionality of the nltk toolkit. My program can by by running "python nlp_practice.py" in the terminal. This code simply prints the 20 most frequently used words (excluding stopwords) in each of two sermons. 
