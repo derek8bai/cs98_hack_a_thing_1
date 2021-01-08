@@ -42,13 +42,15 @@ import json
 from ibm_watson import ToneAnalyzerV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
-authenticator = IAMAuthenticator('api_key')
+api_key = ""
+url = ""
+authenticator = IAMAuthenticator(api_key)
 tone_analyzer = ToneAnalyzerV3(
     version='2020-01-08',
     authenticator=authenticator
 )
 
-tone_analyzer.set_service_url('url')
+tone_analyzer.set_service_url(url)
 
 tone_analysis = tone_analyzer.tone(
     {'text': text1},
