@@ -26,7 +26,6 @@ text2 = text2.lower()
 tokens = [t for t in text2.split()]
 
 # removing stopwords from the text
-from nltk.corpus import stopwords
 clean_tokens = tokens[:]
 for token in tokens:
     if token in stopwords.words('english'):
@@ -36,9 +35,6 @@ for token in tokens:
 freq = nltk.FreqDist(clean_tokens)
 freq.plot(20, cumulative=False)
 
-
-# importing the requests library 
-import requests 
   
 # api-endpoint 
   
@@ -48,7 +44,7 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 authenticator = IAMAuthenticator('api_key')
 tone_analyzer = ToneAnalyzerV3(
-    version='2017-09-21',
+    version='2020-01-08',
     authenticator=authenticator
 )
 
